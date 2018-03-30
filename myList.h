@@ -18,6 +18,20 @@ namespace MyList {
 	template <typename T>
 	using List = struct _MyList<T>*;
 	
+	enum class Placement {Front, Back};
+
+	template <typename T>
+	List<T> Add(List<T> Object, const T Value, Placement Place = Placement::Back)
+	{
+		return Add(Object, CreateList(Value), Place);
+	}
+
+	template <typename T>
+	List<T> Add(List<T> LObject, List<T> RObject, Placement Place = Placement::Back)
+	{
+		return (Place == Placement::Back) ? Insert(GetTail(LObject), RObject) : Insert(GetTail(RObject), LObject);
+	}
+
 	//Функция создания элемента структуры
 	template <typename T>
 	List<T> CreateList(const T & Value)
@@ -143,7 +157,7 @@ namespace MyList {
 
 		return lenght;
 	}
-
+	//вывод на печать
 	template <typename T>
 	int Display(List<T> list)
 	{
