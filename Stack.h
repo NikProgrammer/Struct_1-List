@@ -14,7 +14,7 @@ namespace MyStack
 	};
 
 	template <typename T>
-	using Stack = struct _MyStack<T> *;
+	using Stack = struct _MyStack<T>*;
 
 	//Создание элемента стэка
 	template <typename T>
@@ -62,6 +62,5 @@ namespace MyStack
 			printf_s("%d ", Pop(Object));
 		}
 	}
-	
 	
 }

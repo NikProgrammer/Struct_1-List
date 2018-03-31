@@ -125,7 +125,7 @@ namespace MyList {
 		free(Object);
 
 	}
-	//удаление цепочки
+	//удаление цепочки - доделать
 	template <typename T>
 	void Delete(List<T> RObject, List<T> TObject)
 	{
