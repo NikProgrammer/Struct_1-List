@@ -117,6 +117,7 @@
   <ItemGroup>
     <ClInclude Include="List.h" />
     <ClInclude Include="myList.h" />
+    <ClInclude Include="Stack.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp" />

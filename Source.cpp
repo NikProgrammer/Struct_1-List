@@ -1,13 +1,24 @@
 #include "myList.h"
-
+#include "Stack.h"
+#include <Windows.h>
 
 int main()
 {
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
 	MyList::List<int> testList = MyList::CreateList(15);
 	//MyList::Insert(testList, 75);
 	MyList::Insert(MyList::Insert(testList, 75), 93);
-
+	printf_s("Печать списка:\n");
 	MyList::Display(testList);
+
+	MyStack::Stack<int> testStack = MyStack::CreateStack(10);
+	MyStack::Push(testStack, 20);
+	printf_s("\nПечать testStack:\n");
+	MyStack::DisplayStack(testStack);
+	/*MyStack::Push(testStack, 30);
+	printf_s("\nПечать testStack:\n");
+	MyStack::DisplayStack(testStack);*/
 
 	//printf_s("testList = %d, next = %d, next = %d\n", testList->Data, testList->Next->Data, testList->Next->Next->Data);
 

@@ -21,7 +21,7 @@ namespace MyList {
 	enum class Placement {Front, Back};
 
 	template <typename T>
-	List<T> Add(List<T> Object, const T Value, Placement Place = Placement::Back)
+	List<T> Add(List<T> Object, const T & Value, Placement Place = Placement::Back)
 	{
 		return Add(Object, CreateList(Value), Place);
 	}
